@@ -14,20 +14,20 @@ namespace MissionSoft.Modeles
         private string _nom;
         private string _description;
         private int _nbHeuresPrevues;
-        private Dictionary<DateTime, int> _releveHoraire = new Dictionary<DateTime, int>();
+        private Dictionary<DateTime, int> _releveHoraire;
         private Intervenant _executant;
 
         #endregion
 
         #region Constructeurs
-        public Mission(string nom, string description, int nbHeuresPrevues, Dictionary<DateTime, int> releveHoraire, Intervenant executant)
+        public Mission(string nom, string description, int nbHeuresPrevues, Intervenant executant)
         {
             _nom = nom;
             _description = description;
             _nbHeuresPrevues = nbHeuresPrevues;
-            _releveHoraire = releveHoraire;
             _executant = executant;
             CollClassMission.Add(this);
+            this.ReleveHoraire = new Dictionary<DateTime, int>();
         }
         #endregion
 
