@@ -20,15 +20,14 @@
                                 <ViewCell.View>
                                     <Grid Padding="5">
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="60"></RowDefinition>
-                                            <RowDefinition Height="10"></RowDefinition>
+                                            <RowDefinition Height="auto"></RowDefinition>
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="1*"></ColumnDefinition>
-                                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
                                         </Grid.ColumnDefinitions>
-                                        <Label Grid.Row="0" Grid.Column="1" Text="Nom du projet" XAlign="Center" YAlign="Center" TextColor="Black" FontAttributes="Bold"/>
-                                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding NomProjet}" XAlign="Center" YAlign="Center" TextColor="Black"/>
+                                        <Label Grid.Row="0" Grid.Column="1" Text="Nom du projet :" XAlign="Center" YAlign="Center" TextColor="Black" FontAttributes="Bold"/>
+                                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding Nom}" XAlign="Center" YAlign="Center" TextColor="Black"/>
                                     </Grid>
                                 </ViewCell.View>
                             </ViewCell>
