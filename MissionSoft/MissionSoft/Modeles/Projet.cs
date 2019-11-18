@@ -10,11 +10,13 @@ namespace MissionSoft.Modeles
         #region Attributs
 
         public static ArrayList CollClassProjet = new ArrayList();
+        public ArrayList lesMissions;
 
         private string _nom;
         private DateTime _debut;
         private DateTime _fin;
         private float _prixFactureMO;
+
 
         #endregion
 
@@ -27,6 +29,7 @@ namespace MissionSoft.Modeles
             Fin = fin;
             PrixFactureMO = prixFactureMO;
             CollClassProjet.Add(this);
+            lesMissions = new ArrayList();
         }
 
         #endregion
@@ -41,6 +44,18 @@ namespace MissionSoft.Modeles
         #endregion
 
         #region Méthodes
+
+        private float cumulCoutMO()
+        {
+            float res = 0;
+            return res;
+        }
+
+        public float margeBrutCourante()
+        {
+            float res = 0;
+            return res;
+        }
 
         #endregion
 
