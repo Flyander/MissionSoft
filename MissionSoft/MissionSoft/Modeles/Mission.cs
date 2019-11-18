@@ -8,24 +8,26 @@ namespace MissionSoft.Modeles
     class Mission
     {
         #region Attributs
+
         public static ArrayList CollClassMission = new ArrayList();
 
         private string _nom;
         private string _description;
         private int _nbHeuresPrevues;
-        private Dictionary<DateTime, int> _releveHoraire = new Dictionary<DateTime, int>();
+        private Dictionary<DateTime, int> _releveHoraire;
         private Intervenant _executant;
+
         #endregion
 
         #region Constructeurs
-        public Mission(string nom, string description, int nbHeuresPrevues, Dictionary<DateTime, int> releveHoraire, Intervenant executant)
+        public Mission(string nom, string description, int nbHeuresPrevues, Intervenant executant)
         {
             _nom = nom;
             _description = description;
             _nbHeuresPrevues = nbHeuresPrevues;
-            _releveHoraire = releveHoraire;
             _executant = executant;
             CollClassMission.Add(this);
+            this.ReleveHoraire = new Dictionary<DateTime, int>();
         }
         #endregion
 
@@ -38,6 +40,32 @@ namespace MissionSoft.Modeles
         #endregion
 
         #region Methodes
+        public Dictionary<DateTime, int> getReleveHoraire()
+        {
+
+            return this.ReleveHoraire;
+        }
+
+        public Intervenant getExecutant()
+        {
+            return this.Executant;
+        }
+
+        public void ajoutReleve(DateTime jour, int nbHeures)
+        {
+            this.ReleveHoraire.Add(jour, nbHeures);
+        }
+
+        public int nbHeuresEffectuees()
+        {
+            int nbHeure = 0;
+            foreach (KeyValuePair < DateTime, int> unElement in this.getReleveHoraire())
+            {
+                nbHeure += unElement.Value;
+            }
+
+            return nbHeure;
+        }
         #endregion
     }
 }

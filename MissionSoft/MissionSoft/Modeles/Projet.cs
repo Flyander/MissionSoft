@@ -46,13 +46,21 @@ namespace MissionSoft.Modeles
 
         private float cumulCoutMO()
         {
-            float res = 0;
+            float res = 0.0f;
+            foreach(Mission uneMission in lesMissions)
+            {
+                res += uneMission.nbHeuresEffectuees();
+            }
             return res;
         }
 
         public float margeBrutCourante()
         {
-            float res = 0;
+            float res = 0.0f;
+            foreach(Mission uneMission in lesMissions)
+            {
+                res += (PrixFactureMO / uneMission.getExecutant().getTauxHoraire());
+            }
             return res;
         }
 
