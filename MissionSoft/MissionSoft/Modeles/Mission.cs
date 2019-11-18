@@ -8,6 +8,7 @@ namespace MissionSoft.Modeles
     class Mission
     {
         #region Attributs
+
         public static ArrayList CollClassMission = new ArrayList();
 
         private string _nom;
@@ -15,6 +16,7 @@ namespace MissionSoft.Modeles
         private int _nbHeuresPrevues;
         private Dictionary<DateTime, int> _releveHoraire = new Dictionary<DateTime, int>();
         private Intervenant _executant;
+
         #endregion
 
         #region Constructeurs
