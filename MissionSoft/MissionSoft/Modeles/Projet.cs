@@ -47,7 +47,11 @@ namespace MissionSoft.Modeles
 
         private float cumulCoutMO()
         {
-            float res = 0;
+            float res = 0.0f;
+            foreach(Mission uneMission in lesMissions)
+            {
+                res += uneMission.nbHeuresEffectuees();
+            }
             return res;
         }
 
