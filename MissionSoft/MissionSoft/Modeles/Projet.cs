@@ -57,7 +57,11 @@ namespace MissionSoft.Modeles
 
         public float margeBrutCourante()
         {
-            float res = 0;
+            float res = 0.0f;
+            foreach(Mission uneMission in lesMissions)
+            {
+                res += (PrixFactureMO / uneMission.getExecutant().getTauxHoraire());
+            }
             return res;
         }
 
