@@ -20,7 +20,7 @@ namespace MissionSoft.Modeles
 
         public Intervenant(string nom, float tauxHoraire)
         {
-            this._nom = nom;
+            this.Nom = nom;
             this.TauxHoraire = tauxHoraire;
 
             Intervenant.CollClasseIntervenant.Add(this);
@@ -30,6 +30,7 @@ namespace MissionSoft.Modeles
 
         #region Getters/Setters
 
+        public string Nom { get => _nom; set => _nom = value; }
         public float TauxHoraire { get => _tauxHoraire; set => _tauxHoraire = value; }
 
         #endregion
@@ -37,7 +38,10 @@ namespace MissionSoft.Modeles
 
         #region Méthodes
 
-
+        public float getTauxHoraire()
+        {
+            return TauxHoraire;
+        }
 
         #endregion
     }
