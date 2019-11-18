@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace MissionSoft.Vues
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PageAccueil : ContentPage
+    public partial class MissionsPage : ContentView
     {
-        public PageAccueil()
+        public MissionsPage()
         {
             InitializeComponent();
         }

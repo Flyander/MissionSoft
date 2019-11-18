@@ -17,7 +17,6 @@ namespace MissionSoft.Modeles
         private DateTime _fin;
         private float _prixFactureMO;
 
-
         #endregion
 
         #region Constructeurs
