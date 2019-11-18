@@ -38,6 +38,32 @@ namespace MissionSoft.Modeles
         #endregion
 
         #region Methodes
+        public Dictionary<DateTime, int> getReleveHoraire()
+        {
+
+            return this.ReleveHoraire;
+        }
+
+        public Intervenant getExecutant()
+        {
+            return this.Executant;
+        }
+
+        public void ajoutReleve(DateTime jour, int nbHeures)
+        {
+            this.ReleveHoraire.Add(jour, nbHeures);
+        }
+
+        public int nbHeuresEffectuees()
+        {
+            int nbHeure = 0;
+            foreach (KeyValuePair < DateTime, int> unElement in this.getReleveHoraire())
+            {
+                nbHeure += unElement.Value;
+            }
+
+            return nbHeure;
+        }
         #endregion
     }
 }
