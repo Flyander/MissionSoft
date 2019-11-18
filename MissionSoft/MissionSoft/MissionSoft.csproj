@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Modeles\" />
-    <Folder Include="VuesModeles\" />
-    <Folder Include="Vues\" />
+    <EmbeddedResource Update="Vues\PageAccueil.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
